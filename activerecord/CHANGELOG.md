@@ -1,3 +1,13 @@
+*   Add transaction-level dirty tracking with `transaction_changes`,
+    `transaction_changes?`, `transaction_change_to_attribute?`,
+    `transaction_change_to_attribute`, and `attribute_before_transaction`,
+    including their generated per-attribute methods.
+
+    These methods report cumulative changes across all saves in a transaction
+    and remain available in `after_commit` callbacks.
+
+    *Lucas Campanari*
+
 *   Add named default scopes.
 
     Default scopes can now be given a name, making them durable. They
